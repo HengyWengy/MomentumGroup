@@ -324,6 +324,12 @@ h3 {
   object-fit: cover;
 }
 
+.image-frame img.about-photo {
+  height: min(680px, 78vh);
+  object-fit: contain;
+  background: #f7f5ef;
+}
+
 .vision-band {
   color: var(--ink);
   background: var(--paper);
