@@ -452,33 +452,51 @@ h3 {
 
 .culture-band {
   position: relative;
-  padding: 88px 0;
-  color: var(--ink);
-  background: var(--paper);
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding: 72px 0;
+  color: var(--paper);
+  background: #f7f5ef;
   overflow: hidden;
 }
 
 .culture-image {
-  margin-bottom: 42px;
+  position: absolute;
+  inset: 56px 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .culture-image img {
-  width: 100%;
+  width: auto;
+  max-width: min(1180px, calc(100% - 40px));
+  max-height: calc(100svh - 110px);
   height: auto;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper);
-  box-shadow: var(--shadow);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .culture-content {
   position: relative;
   z-index: 1;
-  padding: 0;
+  max-width: 1040px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: rgba(7, 7, 7, 0.72);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 
 .culture-content h2 {
   max-width: 760px;
+  color: var(--paper);
 }
 
 .growth-list {
@@ -490,38 +508,57 @@ h3 {
 .growth-list article {
   padding: 22px;
   color: var(--ink);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .testimonial-section {
   position: relative;
-  padding: 80px 0 92px;
-  background: linear-gradient(180deg, #f8b19f 0%, #f8b19f 42%, var(--paper) 42%, var(--paper) 100%);
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 58px 0 64px;
+  background: linear-gradient(180deg, #ffb199 0%, #ffb199 53%, var(--paper) 53%, var(--paper) 100%);
   overflow: hidden;
 }
 
 .testimonial-section::before {
   content: "";
   position: absolute;
-  top: -160px;
-  right: -110px;
-  width: min(760px, 72vw);
-  height: 420px;
-  border: 42px solid rgba(255, 255, 255, 0.24);
+  top: -250px;
+  right: -160px;
+  width: min(880px, 78vw);
+  height: 520px;
+  border: 54px solid rgba(255, 255, 255, 0.20);
   border-left-color: transparent;
   border-bottom-color: transparent;
   border-radius: 0 0 0 360px;
   transform: rotate(-8deg);
 }
 
+.testimonial-section::after {
+  content: "";
+  position: absolute;
+  top: -130px;
+  left: -120px;
+  width: min(620px, 62vw);
+  height: 300px;
+  border: 34px solid rgba(255, 255, 255, 0.14);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 0 0 360px 0;
+  transform: rotate(8deg);
+}
+
 .testimonial-heading {
   position: relative;
   z-index: 1;
-  margin-bottom: 32px;
+  margin-bottom: 46px;
 }
 
 .testimonial-heading .section-kicker {
   color: var(--ink);
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  margin-bottom: 8px;
+  font-size: clamp(3rem, 6.8vw, 4.9rem);
   line-height: 0.95;
 }
 
@@ -536,7 +573,7 @@ h3 {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
 .testimonial-card {
@@ -547,25 +584,25 @@ h3 {
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius);
   background: var(--paper);
-  box-shadow: 0 16px 28px rgba(184, 66, 72, 0.22);
+  box-shadow: 0 16px 24px rgba(184, 66, 72, 0.24);
 }
 
 .testimonial-photo {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 420px;
-  background: #f7f4ee;
+  min-height: 300px;
+  background: #f7f4ef;
 }
 
 .testimonial-photo img {
   width: 100%;
-  height: 420px;
+  height: 300px;
   object-fit: contain;
 }
 
 .testimonial-copy {
-  padding: 20px 22px 24px;
+  padding: 18px 20px 22px;
 }
 
 .testimonial-copy h3 {
@@ -576,8 +613,8 @@ h3 {
 .testimonial-copy p {
   margin-bottom: 0;
   color: var(--ink);
-  font-size: 1.02rem;
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
 .achievements {
@@ -856,14 +893,27 @@ h3 {
   }
 
   .culture-band {
+    min-height: auto;
     padding: 64px 0;
   }
 
+  .culture-image {
+    position: relative;
+    inset: auto;
+    margin-bottom: 24px;
+  }
+
+  .culture-image img {
+    max-width: 100%;
+    max-height: none;
+  }
+
   .culture-content {
-    padding: 0;
+    padding: 24px;
   }
 
   .testimonial-section {
+    min-height: auto;
     padding: 58px 0 68px;
   }
 
