@@ -454,8 +454,8 @@ h3 {
   position: relative;
   min-height: 100svh;
   display: grid;
-  align-items: center;
-  padding: 72px 0;
+  align-items: end;
+  padding: 72px 0 54px;
   color: var(--paper);
   background: #f7f5ef;
   overflow: hidden;
@@ -463,7 +463,7 @@ h3 {
 
 .culture-image {
   position: absolute;
-  inset: 56px 0 36px;
+  inset: 20px 0 210px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,7 +474,7 @@ h3 {
 .culture-image img {
   width: auto;
   max-width: min(1180px, calc(100% - 40px));
-  max-height: calc(100svh - 110px);
+  max-height: calc(100svh - 230px);
   height: auto;
   border: 0;
   border-radius: 0;
@@ -487,6 +487,7 @@ h3 {
   z-index: 1;
   max-width: 1040px;
   padding: 30px;
+  margin-bottom: 0;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius);
   background: rgba(7, 7, 7, 0.72);
