@@ -151,10 +151,7 @@ a {
   display: flex;
   align-items: center;
   color: var(--ink);
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 42%, rgba(255, 255, 255, 0.70) 100%),
-    url("assets/momentum-logo-pdf-web.jpg") center center / contain no-repeat,
-    var(--paper);
+  background: var(--paper);
   overflow: hidden;
 }
 
@@ -817,10 +814,7 @@ h3 {
 
   .hero {
     min-height: 76svh;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 52%, rgba(255, 255, 255, 0.96) 100%),
-      url("assets/momentum-logo-pdf-web.jpg") center center / cover no-repeat,
-      var(--paper);
+    background: var(--paper);
   }
 
   .snapshot-grid,
